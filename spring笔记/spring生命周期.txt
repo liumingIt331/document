@@ -1,0 +1,48 @@
+1.ApplicationContext容器启动只会加载非懒加载的单例Bean;
+
+2.FactoryBean
+	FactoryBean是一个特殊的Bean，默认创建单例的懒加载Bean；
+	spring启动的时候会把FactoryBean本身当作一个普通的单例Bean创建完成，放在单例池；FactoryBean.getObject()创建的对象不是在单例池，而是在factoryBeanObjectCache缓存中
+	FactoryBean.getObject()方法获取的对象是懒加载的，在getBean的时候才创建，如果想提前初始化，需要实现SmartFactoryBean接口；
+
+3.后置处理器
+	BeanPostProcesser Bean的后置处理器 初始化前后的处理
+		-- InstantiationAwareBeanPostProcessor 实例化处理器 实例化前后的处理(实例化前处理如果返回了对象，会提前结束Bean的创建)
+		-- InitDestroyAnnotationBeanPostProcessor 处理@PostConstruct、@PreDestroy
+		-- MergedBeanDefinitionPostProcessor对BeanDefinition进行操作
+
+
+4.生命周期
+	生成BeanDefinition
+		-- 基于ASM技术，通过字节码文件而不加载类
+		-- 每一个声明或者扫描到的Bean都会生成一条基础的GenericBeanDefinition
+	合并BeanDefinition
+		-- 针对于有parent属性的Bean，会进行合并，生成RootBeanDefinition
+	加载类
+		-- BeanFactory可以设置ClassLoder，优先级最高
+		-- 其次取当前线程的ClassLoder，一般是AppClassLoader
+		-- 最后取ClassUtils的类加载器
+	实例化前
+		-- CommonAnnotationBeanPostProcessor
+	实例化
+	BeanDefinition后置处理
+		-- MergedBeanDefinitionPostProcessor修改BeanDefinition
+	实例化后
+		-- CommonAnnotationBeanPostProcessor
+	填充属性
+		-- spring自带的依赖注入(一般不会用到)
+	填充属性后
+		-- AutowiredAnnotationBeanPostProcessor @Autowire依赖注入处理
+		-- CommonAnnotationBeanPostProcessor @Resource、@Value依赖注入的处理
+	Aware回调
+		-- BeanNameAware、BeanClassLoaderAware、BeanFactoryAware
+	初始化
+		-- 初始化前BeanPostProcesser
+			-- 执行方法要返回一个Bean对象给下一个BeanPostProcesser，若返回null，则不会执行后面的BeanPostProcesser
+			-- ApplicationContextAwareProcessor处理其他的Aware，比如EnvironmentAware、ApplicationContextAware等
+			-- @PostConstruct方法执行
+		-- 初始化
+			-- InitializeBean接口执行afterPropertiesSet()
+			-- 执行initMethod方法
+		-- 初始化后BeanPostProcesser
+			-- AOP的处理

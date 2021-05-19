@@ -1,0 +1,17 @@
+spring依赖注入的方式
+	-- 手动注入
+		-- 基于set方法
+		-- 基于构造方法
+	-- 自动注入
+		-- 基于xml的autowire属性
+			-- byType 基于set方法参数类型
+			-- byName 基于set方法的方法名
+			-- construct
+			-- default <beans>标签全局的自动注入配置 default-autowire=""
+			-- no 不进行自动注入
+		-- @Autowire
+			-- 属性 先byType，再byName
+			-- 方法 不一定是set方法
+			-- 构造方法
+			
+			
