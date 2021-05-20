@@ -26,14 +26,14 @@
 		-- CommonAnnotationBeanPostProcessor
 	实例化
 	BeanDefinition后置处理
-		-- MergedBeanDefinitionPostProcessor修改BeanDefinition
+		-- MergedBeanDefinitionPostProcessor修改BeanDefinition  （找@Autowired的注入点）
 	实例化后
 		-- CommonAnnotationBeanPostProcessor
 	填充属性
-		-- spring自带的依赖注入(一般不会用到)
+		-- spring自带的依赖注入byType、byName(一般不会用到)
 	填充属性后
-		-- AutowiredAnnotationBeanPostProcessor @Autowire依赖注入处理
-		-- CommonAnnotationBeanPostProcessor @Resource、@Value依赖注入的处理
+		-- AutowiredAnnotationBeanPostProcessor @Autowire、@Value、@Inject依赖注入处理
+		-- CommonAnnotationBeanPostProcessor @Resource依赖注入的处理
 	Aware回调
 		-- BeanNameAware、BeanClassLoaderAware、BeanFactoryAware
 	初始化

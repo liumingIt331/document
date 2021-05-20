@@ -1,4 +1,4 @@
-spring依赖注入的方式
+1.spring依赖注入的方式
 	-- 手动注入
 		-- 基于set方法
 		-- 基于构造方法
@@ -15,3 +15,25 @@ spring依赖注入的方式
 			-- 构造方法
 			
 			
+2.BeanWrapper  ?
+
+3.DependencyDescriptor 依赖的描述
+	-- 用来描述一个需要被注入的依赖，包装了构造方法、set方法、属性、被@Autowrie等标记的方法
+	-- 继承了InjectionPoint,表示是一个注入点
+	-- 在原生的java中，对依赖的描述往往是在类中引用了另外一个类，表示依赖了该类；但是在spring中依赖的表示方式是构造方法、set方法、属性、被@Autowrie等标记的方法和属性
+	
+4.@Autowrie依赖注入流程
+	-- MergedBeanDefinitionPostProcessor.postProcessMergedBeanDefinition() 扫描到所有的注入点InjectedElement，封装成InjectionMetadata
+	-- 属性填充(spring原生的自动注入byType、byName)
+	-- AutowiredAnnotationBeanPostProcessor.postProcessProperties() 进行注入点的注入
+	-- @Autowire 比 @Value的优先级更高，由Set<Class<? extends Annotation>> autowiredAnnotationTypes = new LinkedHashSet<>(4)属性的添加顺序决定的
+	-- 但是@Value里的值对注入的流程还是有影响的
+
+5.resolveDependency
+	-- 只负责找到依赖的对象，而不负责赋值
+	-- 解析的依赖有两种
+		-- ShortcutDependencyDescriptor
+			-- 这个依赖描述表示已经解析过一次了，保存的一个快速版本，下次再执行依赖解析的时候会直接通过beanName和type去getBean()；
+			-- 至于为什么不直接缓存对象，是因为还考虑到了原型bean的存在
+		
+		-- DependencyDescriptor
