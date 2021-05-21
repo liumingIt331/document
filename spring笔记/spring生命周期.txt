@@ -46,3 +46,4 @@
 			-- 执行initMethod方法
 		-- 初始化后BeanPostProcesser
 			-- AOP的处理
+	Bean的销毁

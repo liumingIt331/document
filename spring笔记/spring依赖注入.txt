@@ -15,7 +15,9 @@
 			-- 构造方法
 			
 			
-2.BeanWrapper  ?
+2.BeanWrapper
+	-- bean的包裹类，即在内部中将会保存该bean的实例，提供其它一些扩展功能。
+	-- 同时，BeanWrapper接口还继承了PropertyAccessor, propertyEditorRegistry, TypeConverter、ConfigurablePropertyAccessor接口，所以它还提供了访问bean的属性值、属性编辑器注册、类型转换等功能。
 
 3.DependencyDescriptor 依赖的描述
 	-- 用来描述一个需要被注入的依赖，包装了构造方法、set方法、属性、被@Autowrie等标记的方法
@@ -23,7 +25,7 @@
 	-- 在原生的java中，对依赖的描述往往是在类中引用了另外一个类，表示依赖了该类；但是在spring中依赖的表示方式是构造方法、set方法、属性、被@Autowrie等标记的方法和属性
 	
 4.@Autowrie依赖注入流程
-	-- MergedBeanDefinitionPostProcessor.postProcessMergedBeanDefinition() 扫描到所有的注入点InjectedElement，封装成InjectionMetadata
+	-- MergedBeanDefinitionPostProcessor.postProcessMergedBeanDefinition() 扫描到所有的注入点InjectedElement，封装成InjectionMetadata（@Autowired，@Value，@Inject三个注解其中之一）
 	-- 属性填充(spring原生的自动注入byType、byName)
 	-- AutowiredAnnotationBeanPostProcessor.postProcessProperties() 进行注入点的注入
 	-- @Autowire 比 @Value的优先级更高，由Set<Class<? extends Annotation>> autowiredAnnotationTypes = new LinkedHashSet<>(4)属性的添加顺序决定的
@@ -37,3 +39,21 @@
 			-- 至于为什么不直接缓存对象，是因为还考虑到了原型bean的存在
 		
 		-- DependencyDescriptor
+			-- 看是否有@Value注解，有的话直接解析@Value，拿到Bean
+			-- 集合处理Map Array Collection
+			-- 根据Type去找，findAutowireCandidates可能找到多个（有六层筛选）
+				-- 拿到所有候选者的beanName，包含父工厂的
+				-- isSelfReference 先排除自身，若后面筛选完成后，没有找到注入的Bean对象，那么会回过头来筛选自己
+				-- isAutowireCandidate 是否是候选者，前三层筛选
+					-- (1)SimpleAutowireCandidateResolver是否是自动注入候选者
+					-- (2)GenericTypeAwareAutowireCandidateResolver 是否是泛型，拿到所有的BeanType和依赖的Type进行一一匹配
+					-- (3)@Qualify注解的匹配
+				-- (4)@Primary注解标记的类
+				-- (5)@Priory注解定义优先级，优先级高的注入
+				-- (6)最后根据Name去进行筛选 属性名或set方法的名字
+			-- 根据Type去找，没找到，检查isRequire属性，若为true则报错，为false，返回null
+			
+6.@Resource 
+	-- CommonAnnotationBeanPostProcessor进行解析
+		-- 如果@Resource注解中指定了name属性，那么则只会根据name属性的值去找bean，如果找不到则报错
+		-- 如果@Resource注解没有指定name属性，那么会先判断当前注入点名字（属性名字或方法参数名字）是不是存在Bean，如果存在，则直接根据注入点名字取获取bean，如果不存在，则会走@Autowired注解的逻辑，会根据注入点类型去找Bean
