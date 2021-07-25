@@ -1,1 +1,131 @@
-<mxfile host="app.diagrams.net" modified="2021-07-25T04:03:58.980Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36" version="14.9.2" etag="wzZxEymHdUl7lKEPpcog" type="github"><diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">7VhZc9MwEP41Hp5gfBQnecRp0wKhU2ihw6NiK7aI7DWynINfzyqWYzsOOYD0yDQv0a43K2m/b4/YcPrx/FKQNPoEAeWGbQZzwzk3bNuybQe/lGZRaLq9bqEIBQu0UaW4Zb+oVppam7OAZg1DCcAlS5tKH5KE+rKhI0LArGk2Bt7cNSUhbSlufcLb2nsWyEjfwu5U+ivKwqjc2XJ7xZOYlMb6JllEApjVVM6F4fQFgCxW8bxPuQpeGZf794t7Ppy4lx8+Zz/JV+/j3fW314WzwSE/WV1B0ET+X9d24XpKeK7jpe8qF2UABeRJQJUT03C8SMYclxYuf1ApFxpwkktAFQgZQQgJ4UOAVNuNIZHazFIyTYJ3CliURxz8SaEaMM71Hihp+y5KmRQwWWGnHKyAUMacjCj3iD8JlwftAweBjxJIqHIVIBn0XarDXVRab8/YagwyyIVPt9jpbJFEhHSbP7ewU+er8VQjd0khplIs0EBQTiSbNslMdE6EK7sKd1xo6A+ggdOiwZDEqcp6oFnySuJqBmKyhRsKl1nEJL1NyTJAMywnTb7UeYBX9UJOskyjuAPkw0CaUiHpfGtYy6euzu2yuGlxVlUKq0z/qFYlzswjAXHWAuI7Fs+XlPyXlHT3TMmyY+3MSU2Wkhh7p6j2dAMskTUTGI8zPNg6dVYb/j2b3rbYdA0tMu3G41nT7ZHI1DmMS9aT55L7hxbhcgyDNxK4CtUq5XkYIlnQXWI4g3btiiAe5dnudtHAWDFoQGLGVbyuKJ9SyXyyoakQzkLc99xHuKnYTB7ckiUhSm4l3S3JivX3iM2m02w2K7nebcwN3aZ7rG7TaWF6g+gV0NkmX+J7Yh3fsddA6D12y+/uU6SfdQl+8I5fVtPdLd/as0xr9phvHPw0CPT0p4DeXjPlyxhwHIbZpzYIlCes8cnL+ag9CYxykSwHAcjlyySwbRKwNzWhB50EykJYA/ULTQlDMM3hKc4B6//8z5zHngPKStGEgKuY2maRYSeGwfos5ljHwwDF6k1tUQqr993OxW8=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-07-25T04:49:36.041Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36" etag="twr2PgvOzGmOzSg50E1f" version="14.9.2" type="github">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="2692" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-2" value="经过一系列构造方法&lt;br&gt;初始化线程池，&lt;br&gt;线程数量默认&lt;br&gt;cpu核心数的两倍" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-3" target="ViQr8SO55YqNYNJ8lVar-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="EventLoopGroup group = new NioEventLoopGroup()" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fontFamily=Lucida Console;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-1160" y="10" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1015" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-1" value="NioEventLoopGroup(nThreads, executor, selectorProvider, DefaultSelectStrategyFactory.INSTANCE);" style="rounded=1;align=center;verticalAlign=middle;labelPosition=center;verticalLabelPosition=middle;labelBackgroundColor=none;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-1160" y="200" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-4" target="ViQr8SO55YqNYNJ8lVar-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-4" value="MultithreadEventLoopGroup(nThreads, executor, selectorProvider, DefaultSelectStrategyFactory.INSTANCE,&lt;br&gt;RejectedExecutionHandlers.reject());" style="rounded=1;align=center;verticalAlign=middle;labelPosition=center;verticalLabelPosition=middle;labelBackgroundColor=none;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-1160" y="350" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-7" target="ViQr8SO55YqNYNJ8lVar-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-7" value="MultithreadEventExecutorGroup(nThreads == 0 ? DEFAULT_EVENT_LOOP_THREADS : nThreads, executor, args);" style="rounded=1;align=center;verticalAlign=middle;labelPosition=center;verticalLabelPosition=middle;labelBackgroundColor=none;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-1160" y="490" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-9" target="ViQr8SO55YqNYNJ8lVar-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-9" value="MultithreadEventExecutorGroup(nThreads, executor,&lt;br&gt;&amp;nbsp;DefaultEventExecutorChooserFactory.INSTANCE, args);" style="rounded=1;align=center;verticalAlign=middle;labelPosition=center;verticalLabelPosition=middle;labelBackgroundColor=none;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-1160" y="630" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Lucida Console;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-19" target="ViQr8SO55YqNYNJ8lVar-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1200" y="582.5" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-19" target="ViQr8SO55YqNYNJ8lVar-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-19" value="MultithreadEventExecutorGroup" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontFamily=Lucida Console;fontColor=#000000;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-1460" y="570" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-21" target="ViQr8SO55YqNYNJ8lVar-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-21" value="MultithreadEventLoopGroup" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontFamily=Lucida Console;fontColor=#000000;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-1460" y="360" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-22" target="ViQr8SO55YqNYNJ8lVar-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-22" value="NioEventLoopGroup" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=none;fontFamily=Lucida Console;fontColor=#000000;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-1455" y="210" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-25" value="" style="shape=flexArrow;endArrow=classic;html=1;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="ViQr8SO55YqNYNJ8lVar-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1350" y="360" as="sourcePoint" />
+            <mxPoint x="-1480" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-26" value="" style="shape=flexArrow;endArrow=classic;html=1;fontFamily=Lucida Console;fontColor=#000000;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-19" target="ViQr8SO55YqNYNJ8lVar-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1190" y="410" as="sourcePoint" />
+            <mxPoint x="-1490" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-30" value="循环赋值" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-27" target="ViQr8SO55YqNYNJ8lVar-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-27" value="children &lt;br&gt;= new EventExecutor[nThreads]" style="rounded=1;align=center;verticalAlign=middle;labelPosition=center;verticalLabelPosition=middle;labelBackgroundColor=none;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-1135" y="790" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-29" target="ViQr8SO55YqNYNJ8lVar-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-29" value="&lt;div&gt;for (int i = 0; i &amp;lt; nThreads; i ++) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;children[i] = newChild(executor, args);&lt;span&gt;}&lt;/span&gt;&lt;/div&gt;" style="rounded=1;align=center;verticalAlign=middle;labelPosition=center;verticalLabelPosition=middle;labelBackgroundColor=none;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-1135" y="950" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-31" target="ViQr8SO55YqNYNJ8lVar-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-31" value="newChild(executor, args)" style="rounded=1;align=center;verticalAlign=middle;labelPosition=center;verticalLabelPosition=middle;labelBackgroundColor=none;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-1135" y="1080" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-33" target="ViQr8SO55YqNYNJ8lVar-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-33" value="&lt;div&gt;new NioEventLoop(this, executor, (SelectorProvider) args[0],&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;((SelectStrategyFactory) args[1]).newSelectStrategy(), (RejectedExecutionHandler) args[2], queueFactory);&lt;/div&gt;" style="rounded=1;align=center;verticalAlign=middle;labelPosition=center;verticalLabelPosition=middle;labelBackgroundColor=none;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-1135" y="1180" width="230" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-43" value="调用父类构造方法" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-36" target="ViQr8SO55YqNYNJ8lVar-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-36" value="&lt;div&gt;NioEventLoop&lt;span&gt;构造方法&lt;/span&gt;&lt;/div&gt;&lt;div&gt;1.赋值serviceProvider&lt;/div&gt;&lt;div&gt;2.使用provider创建Selector&lt;/div&gt;&lt;div&gt;3.创建taskQueue&lt;span&gt;(&lt;/span&gt;&lt;/div&gt;newTaskQueue(queueFactory)&lt;span&gt;)&lt;/span&gt;" style="rounded=1;align=center;verticalAlign=middle;labelPosition=center;verticalLabelPosition=middle;labelBackgroundColor=none;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-670" y="100" width="230" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-38" value="" style="swimlane;startSize=0;rounded=0;labelBackgroundColor=none;fontFamily=Lucida Console;fontColor=#000000;verticalAlign=middle;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-1165" y="770" width="300" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-45" value="调用父类构造" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-41" target="ViQr8SO55YqNYNJ8lVar-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-41" value="SingleThreadEventLoop(parent, executor, false, newTaskQueue(queueFactory), newTaskQueue(queueFactory)," style="rounded=1;align=center;verticalAlign=middle;labelPosition=center;verticalLabelPosition=middle;labelBackgroundColor=none;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-670" y="270" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-48" value="调用父类构造" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-44" target="ViQr8SO55YqNYNJ8lVar-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-44" value="SingleThreadEventExecutor(parent, executor, addTaskWakesUp, taskQueue, rejectedExecutionHandler);" style="rounded=1;align=center;verticalAlign=middle;labelPosition=center;verticalLabelPosition=middle;labelBackgroundColor=none;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-670" y="430" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-49" value="调用父类构造" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Lucida Console;fontColor=#000000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ViQr8SO55YqNYNJ8lVar-46" target="ViQr8SO55YqNYNJ8lVar-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-46" value="AbstractScheduledEventExecutor(parent)" style="rounded=1;align=center;verticalAlign=middle;labelPosition=center;verticalLabelPosition=middle;labelBackgroundColor=none;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-670" y="590" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ViQr8SO55YqNYNJ8lVar-47" value="AbstractEventExecutor(parent)&lt;br&gt;&lt;br&gt;设置归属的EventLoopGroup" style="rounded=1;align=center;verticalAlign=middle;labelPosition=center;verticalLabelPosition=middle;labelBackgroundColor=none;html=1;whiteSpace=wrap;fontFamily=Lucida Console;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-670" y="710" width="230" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
